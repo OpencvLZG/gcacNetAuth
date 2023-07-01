@@ -82,173 +82,183 @@ class _SelfSreenState extends State<SelfSreen> {
                   color: KDeafultFontColor2.withOpacity(0.7), fontSize: 16),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 10),
-            height: 50,
-            width: 400,
-            decoration: BoxDecoration(
-                color: KDeafultFontColor2.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(10)),
-            child: Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.settings,
-                      color: KDeafultFontColor2,
-                    ),
-                  ),
-                  Text(
-                    "Setting",
-                    style: KDefaultTextStylet,
-                  ),
-                  IconButton(
+          GestureDetector(
+            child: Container(
+              margin: EdgeInsets.only(top: 10),
+              height: 50,
+              width: 400,
+              decoration: BoxDecoration(
+                  color: KDeafultFontColor2.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(10)),
+              child: Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
                       onPressed: () {},
                       icon: Icon(
-                        Icons.arrow_left,
+                        Icons.settings,
                         color: KDeafultFontColor2,
-                        size: 25,
-                      ))
-                ],
+                      ),
+                    ),
+                    Text(
+                      "Setting",
+                      style: KDefaultTextStylet,
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_left,
+                          color: KDeafultFontColor2,
+                          size: 25,
+                        ))
+                  ],
+                ),
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 10),
-            height: 50,
-            width: 400,
-            decoration: BoxDecoration(
-                color: KDeafultFontColor2.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(10)),
-            child: Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.person,
-                      color: KDeafultFontColor2,
-                    ),
-                  ),
-                  Text(
-                    "Account",
-                    style: KDefaultTextStylet,
-                  ),
-                  IconButton(
+          GestureDetector(
+            child: Container(
+              margin: EdgeInsets.only(top: 10),
+              height: 50,
+              width: 400,
+              decoration: BoxDecoration(
+                  color: KDeafultFontColor2.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(10)),
+              child: Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
                       onPressed: () {},
                       icon: Icon(
-                        Icons.arrow_left,
+                        Icons.person,
                         color: KDeafultFontColor2,
-                        size: 25,
-                      ))
-                ],
+                      ),
+                    ),
+                    Text(
+                      "Account",
+                      style: KDefaultTextStylet,
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_left,
+                          color: KDeafultFontColor2,
+                          size: 25,
+                        ))
+                  ],
+                ),
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 10),
-            height: 50,
-            width: 400,
-            decoration: BoxDecoration(
-                color: KDeafultFontColor2.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(10)),
-            child: Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.person_4_outlined,
-                      color: KDeafultFontColor2,
-                    ),
-                  ),
-                  Text(
-                    "ContactUs",
-                    style: KDefaultTextStylet,
-                  ),
-                  IconButton(
+          GestureDetector(
+            child: Container(
+              margin: EdgeInsets.only(top: 10),
+              height: 50,
+              width: 400,
+              decoration: BoxDecoration(
+                  color: KDeafultFontColor2.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(10)),
+              child: Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
                       onPressed: () {},
                       icon: Icon(
-                        Icons.arrow_left,
+                        Icons.person_4_outlined,
                         color: KDeafultFontColor2,
-                        size: 25,
-                      ))
-                ],
+                      ),
+                    ),
+                    Text(
+                      "ContactUs",
+                      style: KDefaultTextStylet,
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_left,
+                          color: KDeafultFontColor2,
+                          size: 25,
+                        ))
+                  ],
+                ),
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 10),
-            height: 50,
-            width: 400,
-            decoration: BoxDecoration(
-                color: KDeafultFontColor2.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(10)),
-            child: Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.link,
-                      color: KDeafultFontColor2,
-                    ),
-                  ),
-                  Text(
-                    "Github",
-                    style: KDefaultTextStylet,
-                  ),
-                  IconButton(
+          GestureDetector(
+            child: Container(
+              margin: EdgeInsets.only(top: 10),
+              height: 50,
+              width: 400,
+              decoration: BoxDecoration(
+                  color: KDeafultFontColor2.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(10)),
+              child: Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
                       onPressed: () {},
                       icon: Icon(
-                        Icons.arrow_left,
+                        Icons.link,
                         color: KDeafultFontColor2,
-                        size: 25,
-                      ))
-                ],
+                      ),
+                    ),
+                    Text(
+                      "Github",
+                      style: KDefaultTextStylet,
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_left,
+                          color: KDeafultFontColor2,
+                          size: 25,
+                        ))
+                  ],
+                ),
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 10),
-            height: 50,
-            width: 400,
-            decoration: BoxDecoration(
-                color: KDeafultFontColor2.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(10)),
-            child: Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.exit_to_app,
-                      color: KDeafultFontColor2,
-                    ),
-                  ),
-                  Text(
-                    "Exit",
-                    style: KDefaultTextStylet,
-                  ),
-                  IconButton(
+          GestureDetector(
+            child: Container(
+              margin: EdgeInsets.only(top: 10),
+              height: 50,
+              width: 400,
+              decoration: BoxDecoration(
+                  color: KDeafultFontColor2.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(10)),
+              child: Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
                       onPressed: () {},
                       icon: Icon(
-                        Icons.arrow_left,
+                        Icons.exit_to_app,
                         color: KDeafultFontColor2,
-                        size: 25,
-                      ))
-                ],
+                      ),
+                    ),
+                    Text(
+                      "Exit",
+                      style: KDefaultTextStylet,
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_left,
+                          color: KDeafultFontColor2,
+                          size: 25,
+                        ))
+                  ],
+                ),
               ),
             ),
           )

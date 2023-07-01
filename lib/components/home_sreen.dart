@@ -12,19 +12,19 @@ class HomeSreen extends StatefulWidget {
 }
 
 class _HomeSreenState extends State<HomeSreen> {
-  List<Widget> pageSreens = [MainSreen(), NetWorkSreen(), SelfSreen()];
-  Size size = MediaQueryData().size;
-  int currentIndex = 0;
+  final _controller = PageController();
   void refreshPage(int value) {
     setState(() {
-      currentIndex = value;
+      _controller.jumpToPage(value);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pageSreens[currentIndex],
+      body: PageView(
+          controller: _controller,
+          children: [MainSreen(), NetWorkSreen(), SelfSreen()]),
       bottomNavigationBar: BottomNavBar(
         refreshPage: refreshPage,
       ),
