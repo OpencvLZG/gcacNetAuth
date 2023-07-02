@@ -41,7 +41,7 @@ class _NetWorkSreenState extends State<NetWorkSreen> {
                   },
                   child: Container(
                     child: Padding(
-                        padding: EdgeInsets.fromLTRB(30, 20, 0, 0),
+                        padding: EdgeInsets.fromLTRB(40, 20, 0, 0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -51,7 +51,7 @@ class _NetWorkSreenState extends State<NetWorkSreen> {
                                   color: _selectedIndex == index
                                       ? KDeafultColor
                                       : KDeafultColor.withOpacity(0.3),
-                                  fontSize: 50,
+                                  fontSize: 30,
                                   fontWeight: FontWeight.bold),
                             ),
                             Container(
@@ -71,9 +71,9 @@ class _NetWorkSreenState extends State<NetWorkSreen> {
             ),
           ),
           Container(
-            height: size.height * 0.82,
+            height: size.height * 0.8,
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(30, 30, 30, 0),
+              padding: const EdgeInsets.fromLTRB(40, 30, 40, 0),
               child: PageView(
                 controller: _pageController,
                 children: [NetWorkView(), NewsView()],

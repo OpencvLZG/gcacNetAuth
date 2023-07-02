@@ -84,39 +84,44 @@ class _MainSreenState extends State<MainSreen> {
                   Colors.white.withOpacity(0.1),
                   Colors.white.withOpacity(0),
                 ])),
-            child: Padding(
-              padding: const EdgeInsets.all(30),
-              child: Row(
-                children: [
-                  Container(
-                    height: 80,
-                    width: 80,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(1000),
-                        image: DecorationImage(
-                            image: AssetImage("assets/imgs/cil.jpg"))),
-                  ).animate(delay: Duration(microseconds: 500)).fade().move(
-                      begin: const Offset(-100, 0), curve: Curves.easeOutQuad),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "GcacNetAuth",
-                        style: TextStyle(
-                            fontSize: 50,
-                            color: KDeafultFontColor2.withOpacity(0.7)),
-                      ),
-                      Text(
-                        "                         TechnologyBy-BiliBili(Cilang)",
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: KDeafultFontColor2.withOpacity(0.5)),
-                      ),
-                    ],
-                  )
-                ],
+            child: Container(
+              margin: EdgeInsets.only(top: 5),
+              child: Padding(
+                padding: const EdgeInsets.all(30),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 80,
+                      width: 80,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(1000),
+                          image: DecorationImage(
+                              image: AssetImage("assets/imgs/cil.jpg"))),
+                    ).animate(delay: Duration(microseconds: 500)).fade().move(
+                        begin: const Offset(-100, 0),
+                        curve: Curves.easeOutQuad),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "GcacNetAuth",
+                          style: TextStyle(
+                              fontSize: 30,
+                              color: KDeafultFontColor2.withOpacity(0.7)),
+                        ),
+                        Text(
+                          "TechnologyBy-BiliBili(Cilang)",
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: KDeafultFontColor2.withOpacity(0.5)),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ),
@@ -124,7 +129,7 @@ class _MainSreenState extends State<MainSreen> {
             bottom: 0,
             child: Container(
               padding: EdgeInsets.all(40),
-              height: 700,
+              height: 600,
               width: size.width,
               decoration: BoxDecoration(
                 color: KDefaultColor2,
@@ -267,7 +272,7 @@ class _MainSreenState extends State<MainSreen> {
                       children: [
                         SizedBox(
                           height: 50,
-                          width: 270,
+                          width: 150,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
@@ -288,7 +293,7 @@ class _MainSreenState extends State<MainSreen> {
                         ),
                         SizedBox(
                           height: 50,
-                          width: 270,
+                          width: 150,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
@@ -305,12 +310,12 @@ class _MainSreenState extends State<MainSreen> {
                 ],
               ),
             ),
-          ),
+          )
+              .animate(delay: Duration(milliseconds: 500))
+              .fade()
+              .move(begin: const Offset(0, 100), curve: Curves.easeOutQuad),
         ],
-      )
-          .animate(delay: Duration(milliseconds: 500))
-          .fade()
-          .move(begin: const Offset(0, 100), curve: Curves.easeOutQuad),
+      ),
     );
   }
 }

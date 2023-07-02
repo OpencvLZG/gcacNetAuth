@@ -20,6 +20,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Theme(
       data: ThemeData(splashColor: Colors.transparent),
       child: NavigationBar(
+        height: 65,
         onDestinationSelected: (int index) {
           setState(() {
             currentIndex = index;

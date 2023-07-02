@@ -16,6 +16,7 @@ class _HomeSreenState extends State<HomeSreen> {
   void refreshPage(int value) {
     setState(() {
       _controller.jumpToPage(value);
+      
     });
   }
 
@@ -23,6 +24,7 @@ class _HomeSreenState extends State<HomeSreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        // onPageChanged: ,
           controller: _controller,
           children: [MainSreen(), NetWorkSreen(), SelfSreen()]),
       bottomNavigationBar: BottomNavBar(
