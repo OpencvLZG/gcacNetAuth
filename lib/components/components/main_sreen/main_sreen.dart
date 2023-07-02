@@ -23,6 +23,7 @@ class _MainSreenState extends State<MainSreen> {
   String choosedUaName = "null";
   List<String> accountList = [];
   String chooseAccount = "null";
+  String authIp = "";
   @override
   void initState() {
     // TODO: implement initState
@@ -105,6 +106,7 @@ class _MainSreenState extends State<MainSreen> {
                       width: 20,
                     ),
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           "GcacNetAuth",
@@ -137,6 +139,9 @@ class _MainSreenState extends State<MainSreen> {
               ),
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 30,
+                  ),
                   Form(
                     key: _formKey,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -150,7 +155,7 @@ class _MainSreenState extends State<MainSreen> {
                                   return "Ip format error";
                                 }
                               },
-                              onSaved: (newValue) => userAccount = newValue!,
+                              onSaved: (newValue) => authIp = newValue!,
                               decoration: InputDecoration(
                                 prefixIcon: Icon(Icons.network_check),
                                 labelText: "Ip",
@@ -285,8 +290,10 @@ class _MainSreenState extends State<MainSreen> {
                               if ((_formKey.currentState as FormState)
                                   .validate()) {
                                 (_formKey.currentState as FormState).save();
+                                print(authIp);
                                 print(userAccount);
                                 print(passWord);
+                                print(choosedUaName);
                               }
                             },
                           ),

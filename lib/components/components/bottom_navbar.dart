@@ -7,7 +7,9 @@ import '../../constant/constant.dart';
 class BottomNavBar extends StatefulWidget {
   // const BottomNavBar({super.key});
   final Function(int) refreshPage;
-  const BottomNavBar({super.key, required this.refreshPage});
+  final int currentIndex;
+  const BottomNavBar(
+      {super.key, required this.refreshPage, required this.currentIndex});
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
 }
@@ -27,7 +29,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             widget.refreshPage(index);
           });
         },
-        selectedIndex: currentIndex,
+        selectedIndex: widget.currentIndex,
         destinations: const <Widget>[
           NavigationDestination(
             icon: Icon(Icons.home),

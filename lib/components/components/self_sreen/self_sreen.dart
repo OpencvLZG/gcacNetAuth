@@ -24,7 +24,7 @@ class _SelfSreenState extends State<SelfSreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              height: 100,
+              height: 50,
             ),
             Stack(
               children: [

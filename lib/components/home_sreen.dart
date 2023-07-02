@@ -13,10 +13,11 @@ class HomeSreen extends StatefulWidget {
 
 class _HomeSreenState extends State<HomeSreen> {
   final _controller = PageController();
+  int _currentIndex = 0;
   void refreshPage(int value) {
     setState(() {
       _controller.jumpToPage(value);
-      
+      _currentIndex = value;
     });
   }
 
@@ -24,11 +25,13 @@ class _HomeSreenState extends State<HomeSreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
-        // onPageChanged: ,
+          // onPageChanged: ,
           controller: _controller,
+          onPageChanged: refreshPage,
           children: [MainSreen(), NetWorkSreen(), SelfSreen()]),
       bottomNavigationBar: BottomNavBar(
         refreshPage: refreshPage,
+        currentIndex: _currentIndex,
       ),
     );
   }
