@@ -32,16 +32,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
         selectedIndex: widget.currentIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            icon: Icon(Icons.home),
+            selectedIcon: Icon(Icons.home),
+            icon: Icon(Icons.home_outlined),
             label: 'Home',
           ),
           NavigationDestination(
-            icon: Icon(Icons.network_cell),
-            label: 'NetWork',
+            selectedIcon: Icon(Icons.account_balance_wallet),
+            icon: Icon(Icons.account_balance_wallet_outlined),
+            label: 'Accounts',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.supervised_user_circle),
-            icon: Icon(Icons.supervised_user_circle),
+            selectedIcon: Icon(Icons.person_2),
+            icon: Icon(Icons.person_2_outlined),
             label: 'Self',
           ),
         ],
