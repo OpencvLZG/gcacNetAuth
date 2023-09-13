@@ -41,41 +41,86 @@ App directory
 
 `````
 
+Get Start
+
+```dart
+// Get the ip address
+//   ->./lib/
+//		->controller/
+//			->net_handle/
+//				->getip.dart 
+
+// Ip regex
+//	->./lib/
+//		->utils/
+//			->regex/
+//				->vaildIp.dart line 1
+bool validateIP(String ip) {
+  // 10.34.1.1 true 10.35.1.1 flase
+  final RegExp ipRegex = RegExp(r'^10\.34\.(\d+)\.(\d+)$');
+  if (!ipRegex.hasMatch(ip)) {
+    return false;
+  }
+
+  print('IP is valid');
+  return true;
+}
+
+// Refersh components
+//	->./lib/
+//		->components/
+//			->main_sreen/
+//				->main_sreen.dart  line 39
+void initState() {
+    //some context
+    if (authIp == "") {
+      Future<String> response = getIp(_ipController);
+    }
+  }
+
+// Auth Button
+//	->./lib/
+//		->components/
+//			->main_sreen/
+//				->main_sreen.dart  line 352
+onPressed: () async {
+    //some context
+    String url = 'http://10.95.254.8/quickauth.do';
+    AuthUser netAuth = AuthUser(account, passWord, authIp, ua);
+    bool _scLabel =await netAuth.authNet(url, context);
+    if (_scLabel) {
+        addAccount();
+        setState(() {
+            refreshAccount();
+                    });
+    }
+}
+// Auth Net 
+//	->./lib/
+//		->controller/
+//			->net_handle/
+//				->auth_net.dart  line 41
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
 
 ### App View
 
-![image](gitImage/anroid-debug%20(1).png)
+![image](gitImage/anroid-debug-1.png)
 
 <center>Login page</center>
 
-![image](gitImage/anroid-debug%20(2).png)
+![image](gitImage/anroid-debug-2.png)
 
 <center>Account mange page</center>
 
 ### Donate
+
+Thank ur supprt
 
 | <center>微信</center>                            | <center>支付宝</center>                       |
 | ------------------------------------------------ | --------------------------------------------- |

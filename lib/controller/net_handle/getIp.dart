@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:wifi_info_plugin_plus/wifi_info_plugin_plus.dart';
 import 'package:http/http.dart' as http;
 
-import '../../utils/regex/interfaceRegexIp.dart';
-import '../../utils/regex/vaildIp.dart';
+// import '../../utils/regex/interfaceRegexIp.dart';
+// import '../../utils/regex/vaildIp.dart';
 
-Future<String> getLocalIP() {
-  return NetworkInterface.list(includeLoopback: false, includeLinkLocal: false)
-      .then((interfaces) {
-    for (var interface in interfaces) {
-      List params = parseInterfaceIp(interface.addresses.toString());
+// Future<String> getLocalIP() {
+//   return NetworkInterface.list(includeLoopback: false, includeLinkLocal: false)
+//       .then((interfaces) {
+//     for (var interface in interfaces) {
+//       List params = parseInterfaceIp(interface.addresses.toString());
 
-      if (params[1] != "IPv4") {
-        continue;
-      }
-      if (validateIP(params[0])) {
+//       if (params[1] != "IPv4") {
+//         continue;
+//       }
+//       if (validateIP(params[0])) {
         return params[0];
       }
     }
